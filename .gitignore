@@ -172,3 +172,6 @@ UpgradeLog*.htm
 
 # Microsoft Fakes
 FakesAssemblies/
+/SimpleTabBrowser/SimpleTabBrowser/SimpleTabBrowser_TemporaryKey.pfx
+/SimpleTabBrowser/SimpleTabBrowser/SimpleTabBrowser.csproj.user
+/SimpleTabBrowser/SimpleTabBrowser.Components/SimpleTabBrowser.Components.csproj.user

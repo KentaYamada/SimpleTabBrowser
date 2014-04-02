@@ -24,7 +24,8 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>7</ApplicationRevision>
+    <ProductName>うぇぶぶらうざv2</ProductName>
+    <ApplicationRevision>10</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -63,6 +64,9 @@
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationIcon>バージョン情報アイコン.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>SimpleTabBrowser.Program</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="KntLibrary.DAO, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">

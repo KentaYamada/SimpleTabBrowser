@@ -159,7 +159,7 @@ namespace SimpleTabBrowser.Components
 			}
 			else if (0 <= current && current <= max)
 			{
-				this.ProgressBar.Value = (int)e.CurrentProgress;
+				this.ProgressBar.Value = (int)current;
 			}
 			else if (current < 0 || max == 0)
 			{
@@ -614,6 +614,8 @@ namespace SimpleTabBrowser.Components
 
 			//初期表示HPへナビゲート
 			this.Navigate(url);
+
+			newBrowser.Focus();
 		}
 
 		#endregion

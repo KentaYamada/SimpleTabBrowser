@@ -347,9 +347,15 @@ namespace SimpleTabBrowser.Components
 				return;
 			}
 
-			this.ShowBookmarkEditor(currentBrowser.DocumentTitle);
+            var dlg = new BookmarkTitleEditor();
 
-			this.AddBookmarkMenu(this.BookmarkTitle, currentBrowser.Url.ToString());
+            dlg.MainDisplay = this;
+            dlg.BookmarkTitle = currentBrowser.DocumentTitle;
+
+            if (DialogResult.OK == this.ShowBookmarkEditor(currentBrowser.DocumentTitle))
+            {
+                this.AddBookmarkMenu(this.BookmarkTitle, currentBrowser.Url.ToString());
+            }
 		}
 
 		/// <summary>
@@ -626,14 +632,14 @@ namespace SimpleTabBrowser.Components
 		/// ブックマークタイトル編集ダイアログ表示
 		/// </summary>
 		/// <param name="title">タイトル</param>
-		private void ShowBookmarkEditor(string title)
+		private DialogResult ShowBookmarkEditor(string title)
 		{
 			var dlg = new BookmarkTitleEditor();
 
 			dlg.MainDisplay = this;
 			dlg.BookmarkTitle = title;
 
-			dlg.ShowDialog();
+			return dlg.ShowDialog();
 		}
 
 		#endregion
